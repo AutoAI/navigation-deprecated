@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Navigation.h"
+#include "navigation.h"
 
 int Navigation::test() {
     return 2;

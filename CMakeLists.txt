@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(Navigation)
+project(navigation)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -21,9 +21,9 @@ include_directories(
 )
 
 
-add_executable(Navigation_Run src/Navigation.cpp)
-target_link_libraries(Navigation_Run ${GTEST_LIBRARIES} ${catkin_LIBRARIES} pthread)
-add_dependencies(Navigation_Run Navigation_navigation_cpp)
+add_executable(navigation_run src/navigation.cc)
+target_link_libraries(navigation_run ${GTEST_LIBRARIES} ${catkin_LIBRARIES} pthread)
+add_dependencies(navigation_run navigation_navigation_cc)
 
-catkin_add_gtest(Navigation_utest src/test/utest.cpp)
-target_link_libraries(Navigation_utest ${catkin_LIBRARIES}) 
+catkin_add_gtest(navigation_utest src/test/utest.cc)
+target_link_libraries(navigation_utest ${catkin_LIBRARIES}) 
