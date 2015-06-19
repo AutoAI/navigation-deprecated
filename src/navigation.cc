@@ -6,4 +6,5 @@ int Navigation::test() {
     return 2;
 }
 
-int main(){ }
+int main() { }
+
